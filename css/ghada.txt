@@ -1,0 +1,46 @@
+
+
+$(".test").attr("hambozo")
+
+              new WOW().init();
+
+$(document).ready(function() {
+  $(".skitter-large").skitter({
+	  
+	  interval:1000,
+	  auto_play	:false
+  });
+});
+
+
+$("#btnUp").click(function(){
+	$("html,body").animate({scrollTop:'0'}, 2000)
+
+})
+
+$("a").click(function(){
+	
+	var aHref = $(this).attr("href");
+	
+	var d = $(aHref).offset().top;
+
+	$("html,body").animate({scrollTop:d}, 2000)
+})
+
+$(window).scroll(function(){
+	
+	var scrlTop = $(window).scrollTop();
+	console.log(scrlTop)
+	
+	if(scrlTop > $("#webNav").height())
+		{
+			
+		$("#webNav").addClass("bg-mine")	
+		}
+	else
+		{
+		$("#webNav").removeClass("bg-mine")	
+			
+		}
+})
+
